@@ -14,7 +14,7 @@ Dark green: #28b485
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
@@ -29,7 +29,7 @@ body {
             rgba(126, 213, 111, 0.8),
             rgba(39, 180, 133, 0.8)
         ),
-        url('../img/hero.jpg');
+        url("../img/hero.jpg");
     background-size: cover;
     background-position: top;
     position: relative;
@@ -52,11 +52,13 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -107,4 +109,30 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
