@@ -1,0 +1,11 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass sass/main.scss css/style.css",
+    "sass:watch": "sass --watch sass/main.scss css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.38.0"
+  }
+}
