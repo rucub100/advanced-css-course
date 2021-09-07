@@ -2,10 +2,19 @@
   "name": "natours",
   "version": "1.0.0",
   "scripts": {
-    "sass": "sass sass/main.scss css/style.css",
-    "sass:watch": "sass --watch sass/main.scss css/style.css"
+    "sass": "sass sass/main.scss css/style.css --no-source-map",
+    "sass:watch": "sass --watch sass/main.scss css/style.css --no-source-map",
+    "compile:sass": "sass sass/main.scss css/style.comp.css --no-source-map",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "npx postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css --no-source-map -s compressed",
+    "build:css": "npm run compile:sass; npm run concat:css; npm run prefix:css; npm run compress:css"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "concat": "^1.0.3",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
     "sass": "^1.38.0"
   }
 }
